@@ -3,31 +3,81 @@
 <head>
 	<title>Holiday</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="common_clusters.html">Regular</a>
+    <a href="special_clusters.html">Specials</a>
+    <a href="holiday_specials.html">Holiday</a>
+    <a href="https://www.nerdscandy.com/crunchy-gummy-yummy" target="_blank">Buy</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+<link href="style.css" type="text/css" rel="stylesheet"/>
+
 <body>
 	<h1>Holiday Specials 🎄</h1>
-	<p>there are two types</u></p>
-	<ul>
-		<li><a href="rainbow.html">Rainbow</a></li>
-		<li>Very Berry</li>
-	</ul>	
+	<p>There are three holiday Nerds Gummy Clusters, celebrating Valentines Day, Easter, and Christmas.</u></p>
+	
+<button class="accordion">Valentines Day: "Valentines"</button>
+<div class="panel">
+  <h3 id="valentines">Valentines Day: "Valentines"</h3>
+  <img src="valentines_nerds.jpeg" alt="Valentines Nerds Gummies"/>
+  <p>This is the 3oz share pouch.</p>
+  <p>The flavors in this special are designed to be fruity and sweet, including strawberry, cherry, and punch.</p>
+  <p>The available sizes include the 3oz theater box, the 3oz peg bag, the 3oz share pouch, the 5oz peg bag, and the 8oz stand up bag.</p>
+</div>
 
-	<table border="2">
-<tr>
-	<th>Type</th>
-	<th>Review</th>
-	<th>Sizes</th>
-</tr>
-<tr>
-	<td>Rainbow</td>
-	<td>2/5</td>
-	<td>3oz, 5oz, 8oz</td>
-</tr>
-<tr>
-	<td>Very Berry</td>
-	<td>4/5</td>
-	<td>3oz, 8oz</td>
-	</table>
+<button class="accordion">Easter: "Hoppin'"</button>
+<div class="panel">
+  <h3 id="easter">Easter: "Hoppin'"</h3>
+<img src="easter_nerds.png" alt="Easter Nerds Gummies"/>
+<p>This is the 3oz share pouch.</p>
+<p>This Easter special has been said to combine the classic Rainbow and the Very Berry flavors together to make a sweeter and tangier fruity flavor.</p>
+<p>The available sizes include the 3oz share pack, 3oz share pouch, the 6oz pouch, and the 8oz stand-up bag.</p>
+</div>
 
-<p><a href="index.html">Back</a></p>
+<button class="accordion">Christmas: "Frosty"</button>
+<div class="panel">
+  <h3 id="christmas">Christmas: "Frosty"</h3>
+<img src="christmas_nerds.jpg" alt="Christmas Nerds Gummies"/>
+<p>This is the 3oz share pouch.</p>
+<p>Christmas Nerds feature watermelon, cherry, and punch flavors in a holiday special.
+<p>The available sizes include the 3oz share pouch, the 8oz share pouch, and the 8oz stand-up bag.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>

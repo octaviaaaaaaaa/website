@@ -3,31 +3,73 @@
 <head>
 	<title>Specials</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="common_clusters.html">Regular</a>
+    <a href="special_clusters.html">Specials</a>
+    <a href="holiday_specials.html">Holiday</a>
+    <a href="https://www.nerdscandy.com/crunchy-gummy-yummy" target="_blank">Buy</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+<link href="style.css" type="text/css" rel="stylesheet"/>
+
 <body>
-	<h1>not made</h1>
-	<p>there are two types</u></p>
-	<ul>
-		<li><a href="rainbow.html">Rainbow</a></li>
-		<li>Very Berry</li>
-	</ul>	
+	<h1>Special Nerds</h1>
+	<p>In the 2024 football season, Nerds released two limited-time Gummy Cluster flavors. These had "rivaling" flavors, representing the countless rival teams in the season.</u></p>
+	
 
-	<table border="2">
-<tr>
-	<th>Type</th>
-	<th>Review</th>
-	<th>Sizes</th>
-</tr>
-<tr>
-	<td>Rainbow</td>
-	<td>2/5</td>
-	<td>3oz, 5oz, 8oz</td>
-</tr>
-<tr>
-	<td>Very Berry</td>
-	<td>4/5</td>
-	<td>3oz, 8oz</td>
-	</table>
+  <button class="accordion">Grape Strawberry Blitz</button>
+<div class="panel">
+  <h3 id="blitz">Grape Strawberry Blitz</h3>
+  <img src="blitz.png" alt="Grape Strawberry Blitz Gummies"/>
+  <p>This is the 3oz share pouch.</p>
+  <p>This repeating flavor honors the iconic flavor combination of the classic Nerds candies themselves that were made before the gummy clusters were created. It features a mix of grape and strawberry flavors, as the name suggests.</p>
+  <p>The available sizes include the 3oz share pouch, and the 8oz stand up bag.</p>
+</div>
 
-<p><a href="index.html">Back</a></p>
+<button class="accordion">Berry Punch Rush</button>
+<div class="panel">
+  <h3 id="rush">Berry Punch Rush</h3>
+  <img src="rush.png" alt="Berry Punch Rush Gummies"/>
+  <p>This is the 3oz share pouch.</p>
+  <p>Starring the classic USA blue, red, and white, these flavors were made to contrast the Grape Strawberry. This was a new Nerds flavor combination, featuring raspberry, cherry, and punch.</p>
+  <p>The available sizes include the 3oz share pouch, and the 8oz stand up bag.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>

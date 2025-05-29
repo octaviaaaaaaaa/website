@@ -4,40 +4,81 @@
 	<title>Common Clusters</title>
 	<link href="style.css" type="text/css" rel="stylesheet"/>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="common_clusters.html">Regular</a>
+    <a href="special_clusters.html">Specials</a>
+    <a href="holiday_specials.html">Holiday</a>
+    <a href="https://www.nerdscandy.com/crunchy-gummy-yummy" target="_blank">Buy</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+<link href="style.css" type="text/css" rel="stylesheet"/>
+
 <body>
-	<div class="nav">
-		<a href="index.html" class="active">Home</a>
-		<a href="common_clusters.html">Regular</a>
-		<a href="special_clusters">Specials</a>
-		<a href="holiday_specials">Holiday</a>
-		
+	
 	<h1>Common Clusters 😝</h1>
 	<p>There are three original types of Nerds Gummy Cluster:</u></p>
-<ul>
-	<li><a href="#rainbow">Rainbow</a></li>
-	<li><a href="#very_berry">Very Berry</a></li>
-	<li><a href="#big_chewy">Big Chewy</a></li>
-</ul>
 
-	
-	<h3 id="rainbow">Rainbow</h3>
-	<img src="rainbow.png" alt="Rainbow Nerds Gummies"/>
-	<p>This is the 3oz share pouch.</p>
-	<p>The most common type of Nerds Gummy Cluster. The nerds are an assortment of flavors together in a rainbow around the gummy center. The flavors include strawberry (pink), grape (purple), orange (orange), lemonade (yellow), and sour apple (green).</p>
-	<p>The available sizes include the 3oz theater box, the 3oz peg bag, the 3oz share pouch, the 5oz peg bag, and the 8oz stand up bag.</p>
+<button class="accordion">Rainbow</button>
+<div class="panel">
+  <h3 id="rainbow">Rainbow</h3>
+  <img src="rainbow.png" alt="Rainbow Nerds Gummies"/>
+  <p>This is the 3oz share pouch.</p>
+  <p>The most common type of Nerds Gummy Cluster. The nerds are an assortment of flavors together in a rainbow around the gummy center. The flavors include strawberry (pink), grape (purple), orange (orange), lemonade (yellow), and sour apple (green).</p>
+  <p>The available sizes include the 3oz theater box, the 3oz peg bag, the 3oz share pouch, the 5oz peg bag, and the 8oz stand up bag.</p>
+</div>
 
-<h3 id="very_berry">Very Berry</h3>
+<button class="accordion">Very Berry</button>
+<div class="panel">
+  <h3 id="very_berry">Very Berry</h3>
 <img src="very_berry.jpg" alt="Very Berry Nerds Gummies"/>
 <p>This is the 3oz share pouch.</p>
 <p>Another very common type of Nerds Gummy Cluster. This type showcases many berry flavors, including blue raspberry, strawberry, and wildberry, along with grape flavor to equalize the berry.</p>
 <p>The available sizes include the 3oz share pouch, and the 8oz stand up bag.</p>
+</div>
 
-<h3 id="big_chewy">Big Chewy</h3>
+<button class="accordion">Big Chewy</button>
+<div class="panel">
+  <h3 id="big_chewy">Big Chewy</h3>
 <img src="big_chewy.png" alt="Big Chewy Nerds Gummies"/>
 <p>This is the 4.25oz theater box.</p>
 <p>Nerds Gummy Clusters, but double the size. Big Chewy Nerds Gummy Clusters feature orange, lemon, strawberry, and grape flavors.
 <p>The available sizes include the 4oz share pouch, the 4.25oz theater box, the 6oz peg bag, the 10oz stand up bag, and the 51oz tub.</p>
+</div>
 
-<p><a href="index.html">Home</a></p>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
